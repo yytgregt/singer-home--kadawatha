@@ -1,2 +1,2 @@
 # singer-home--kadawatha
-singer home kadasatha
+singer home kadawatha
