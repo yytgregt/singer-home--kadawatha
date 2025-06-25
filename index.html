@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Singer Home Kadawatha</title>
-    <!-- Import Google Fonts for professional typography -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
     <style>
         * {
@@ -15,13 +14,103 @@
         }
 
         body {
-            direction: ltr; /* Changed to left-to-right for English */
-            text-align: left; /* Changed to left for English */
+            direction: ltr;
+            text-align: left;
             background-color: #f4f4f4;
         }
 
-        /* Header */
         header {
+            background-color: #0057b8;
+            color: white;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .logo-subtext {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: url('logo.png') center/cover no-repeat; /* Local logo */
+            border-radius: 5px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .hero {
+            background: url('hero.jpg') center/cover no-repeat; /* Local hero image */
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content .btn {
             background-color: #0057b8;
             color: white;
             padding: 10px 20px;
@@ -34,7 +123,6 @@
             background-color: #003f8a;
         }
 
-        /* Sections */
         section {
             padding: 40px 20px;
             max-width: 1200px;
@@ -65,10 +153,9 @@
 
         section ul li::before {
             content: "✅";
-            margin-right: 10px; /* Changed to margin-right for English */
+            margin-right: 10px;
         }
 
-        /* Contact Form */
         .contact-form {
             max-width: 600px;
             margin: 20px auto;
@@ -95,7 +182,6 @@
             background-color: #003f8a;
         }
 
-        /* Footer */
         footer {
             background-color: #333;
             color: white;
@@ -113,72 +199,10 @@
             text-decoration: underline;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             nav ul {
                 display: none;
                 flex-direction: column;
                 position: absolute;
                 top: 60px;
-                left: 0; /* Changed to left for English */
-                background-color: #0057b8;
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="offers.html">Offers</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Kadawatha's Most Trusted Singer Agent</h1>
-            <p>Electronics, home appliances, and more — all under one roof</p>
-            <a href="products.html" class="btn">View Our Products</a>
-            <a href="contact.html" class="btn">Contact Us</a>
-        </div>
-    </section>
-
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Singer Home Kadawatha is your trusted Singer agent dedicated to fulfilling your household needs. We provide high-quality electronics, home appliances, and much more.</p>
-        <ul>
-            <li>High-quality products</li>
-            <li>Excellent customer service</li>
-            <li>Affordable prices</li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Get in touch with us for your inquiries:</p>
-        <div class="contact-form">
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Message" rows="5" required></textarea>
-            <button type="submit">Send</button>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2025 Singer Home Kadawatha. All rights reserved.</p>
-        <p>
-            <a href="tel:+94112345678">+94 11 234 5678</a> |
-            <a href="mailto:info@singerhome.lk">info@singerhome.lk</a> |
-            <a href="https://maps.google.com">Kadawatha, Sri Lanka</a>
-        </p>
-    </footer>
-
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navMenu = document.querySelector('nav ul');
-
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-    </script>
-</body>
-</html>
+                left: 0;
