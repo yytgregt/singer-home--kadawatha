@@ -1,1 +1,331 @@
-well come singer home kadawath website
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singer Home Kadawatha</title>
+    <!-- Import Google Fonts for professional typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            direction: rtl;
+            text-align: right;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        header {
+            background-color: #0057b8; /* රතු වෙනුවට නිල් */
+            color: white;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Logo Styling */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .logo-subtext {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            color: #ffffff; /* සුදු */
+            letter-spacing: 1px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: url('https://via.placeholder.com/40?text=S') center/cover no-repeat;
+            border-radius: 5px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://via.placeholder.com/1200x400?text=Singer+Showroom') center/cover no-repeat;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content .btn {
+            background-color: #0057b8; /* රතු වෙනුවට නිල් */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 0 10px;
+            border-radius: 5px;
+        }
+
+        .hero-content .btn:hover {
+            background-color: #003f8a; /* තද නිල් */
+        }
+
+        /* Sections */
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        section p, section ul {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        section ul {
+            list-style: none;
+        }
+
+        section ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        section ul li::before {
+            content: "✅";
+            margin-left: 10px;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #0057b8; /* රතු වෙනුවට නිල් */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #003f8a; /* තද නිල් */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #0057b8; /* රතු වෙනුවට නිල් */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background-color: #0057b8; /* රතු වෙනුවට නිල් */
+                width: 100%;
+                padding: 20px;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 24px;
+            }
+
+            .hero-content p {
+                font-size: 16px;
+            }
+
+            .hero-content .btn {
+                display: block;
+                margin: 10px auto;
+            }
+
+            .logo-text {
+                font-size: 20px;
+            }
+
+            .logo-subtext {
+                font-size: 12px;
+            }
+
+            .logo-icon {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <div>
+                    <div class="logo-text">Singer Home</div>
+                    <div class="logo-subtext">Kadawatha</div>
+                </div>
+            </div>
+            <nav>
+                <div class="menu-toggle">☰</div>
+                <ul>
+                    <li><a href="index.html">මුල් පිටුව</a></li>
+                    <li><a href="products.html">නිෂ්පාදන</a></li>
+                    <li><a href="offers.html">වට්ටම්</a></li>
+                    <li><a href="services.html">සේවා</a></li>
+                    <li><a href="about.html">අප ගැන</a></li>
+                    <li><a href="contact.html">අප අමතන්න</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>කඩවතේ විශ්වාසදායකම Singer නියෝජිතයා</h1>
+            <p>ඉලෙක්ට්‍රොනික උපකරණ, ගෘහ භාණ්ඩ සහ තවත් බොහොමයක් — එකම වහලක් යටින්</p>
+            <a href="products.html" class="btn">අපේ නිෂ්පාදන බලන්න</a>
+            <a href="contact.html" class="btn">අපව සොයන්න</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>අප ගැන</h2>
+        <p>Singer Home Kadawatha යනු ඔබේ ගෘහස්ථ අවශ්‍යතා සපුරාලීමට කැපවූ විශ්වාසවන්ත Singer නියෝජිතයෙකි. අපි ඉලෙක්ට්‍රොනික උපකරණ, ගෘහ භාණ්ඩ, සහ තවත් බොහෝ දේ උසස් තත්ත්වයෙන් ලබා දෙන්නෙමු.</p>
+        <ul>
+            <li>උසස් තත්ත්වයේ නිෂ්පාදන</li>
+            <li>විශිෂ්ට පාරිභෝගික සේවාව</li>
+            <li>දැරිය හැකි මිල ගණන්</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>අප අමতන්න</h2>
+        <p>ඔබේ විමසීම් සඳහා අප හා සම්බන්ධ වන්න:</p>
+        <div class="contact-form">
+            <input type="text" placeholder="නම" required>
+            <input type="email" placeholder="විද්‍යුත් තැපෑල" required>
+            <textarea placeholder="පණිවිඩය" rows="5" required></textarea>
+            <button type="submit">යවන්න</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Singer Home Kadawatha. සියලුම හිමිකම් ඇවිරිණි.</p>
+        <p>
+            <a href="tel:+94112345678">+94 11 234 5678</a> |
+            <a href="mailto:info@singerhome.lk">info@singerhome.lk</a> |
+            <a href="https://maps.google.com">කඩවත, ශ්‍රී ලංකාව</a>
+        </p>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
+
